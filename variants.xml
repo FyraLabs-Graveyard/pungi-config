@@ -1,0 +1,12 @@
+<variants>
+    <variant id="Buffet" name="Buffet" type="variant">
+        <arches>
+            <arch>x86_64</arch>
+        </arches>
+    </variant>
+    <variant id="Flagship" name="Flagship" type="variant" is_empty="true">
+        <arches>
+            <arch>x86_64</arch>
+        </arches>
+    </variant>
+</variants>
