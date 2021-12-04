@@ -1,5 +1,5 @@
 <variants>
-    <variant id="Buffet" name="Buffet" type="variant">
+    <variant id="Everything" name="Buffet" type="variant">
         <arches>
             <arch>x86_64</arch>
         </arches>
