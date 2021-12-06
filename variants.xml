@@ -9,4 +9,9 @@
             <arch>x86_64</arch>
         </arches>
     </variant>
+    <variant id="Cutefish" name="Cutefish" type="variant" is_empty="true">
+        <arches>
+            <arch>x86_64</arch>
+        </arches>
+    </variant>
 </variants>
