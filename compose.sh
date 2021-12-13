@@ -1,1 +1,1 @@
-pungi-koji --config ultramarine.conf --target-dir /mnt/koji/compose/35/ $@
+pungi-koji --config ultramarine.conf --target-dir /mnt/koji/compose/35/ --old-composes=/mnt/koji/compose/35 $@
