@@ -14,6 +14,7 @@ move usr/share/anaconda/list-harddrives-stub usr/bin/list-harddrives
 
 ## move_repos()
 move etc/yum.repos.d etc/anaconda.repos.d
+symlink etc/anaconda.repos.d run/install/sources/anaconda
 
 ## Setup mdadm config to turn off homehost
 remove etc/mdadm.conf
