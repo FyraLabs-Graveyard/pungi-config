@@ -1,0 +1,9 @@
+[org.gtk.Settings.Debug]
+	enable-inspector-keybinding=true
+
+[org.gnome.desktop.interface]
+gtk-theme='Fluent-round-dark'
+icon-theme='Fluent-dark'
+
+[org.gnome.desktop.background]
+picture-uri='file:///usr/share/backgrounds/ultramarine-linux/default/default.jpg'
