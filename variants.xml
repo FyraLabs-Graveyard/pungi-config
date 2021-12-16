@@ -3,8 +3,6 @@
         <arches>
             <arch>x86_64</arch>
         </arches>
-        <environments>
-            <environment display_order="2">custom-environment</environment>
         <groups>
             <group default="true">guest-agents</group>
             <group default="true">standard</group>
@@ -15,9 +13,14 @@
             <group default="true">anaconda-tools</group>
             <group default="true">platform-vmware</group>
         </groups>
-
+        <environments>
+          <environment display_order="2">custom-environment</environment>
         </environments>
+
+
     </variant>
+
+
     <variant id="Flagship" name="Flagship" type="variant" is_empty="true">
         <arches>
             <arch>x86_64</arch>
