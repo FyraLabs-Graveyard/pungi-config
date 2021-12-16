@@ -3,8 +3,27 @@
         <arches>
             <arch>x86_64</arch>
         </arches>
+        <environments>
+            <environment display_order="2">custom-environment</environment>
+        <groups>
+            <group default="true">guest-agents</group>
+            <group default="true">standard</group>
+            <group default="true">core</group>
+            <group default="true">hardware-support</group>
+            <group default="true">networkmanager-submodules</group>
+            <!-- Things needed for installation -->
+            <group default="true">anaconda-tools</group>
+            <group default="true">platform-vmware</group>
+        </groups>
+
+        </environments>
     </variant>
     <variant id="Flagship" name="Flagship" type="variant" is_empty="true">
+        <arches>
+            <arch>x86_64</arch>
+        </arches>
+    </variant>
+    <variant id="Pantheon" name="Pantheon" type="variant" is_empty="true">
         <arches>
             <arch>x86_64</arch>
         </arches>
@@ -13,5 +32,30 @@
         <arches>
             <arch>x86_64</arch>
         </arches>
+    </variant>
+    <variant id="Server" name="Server" type="variant">
+        <arches>
+            <arch>x86_64</arch>
+        </arches>
+        <groups>
+            <group default="true">guest-agents</group>
+            <group default="true">standard</group>
+            <group default="true">core</group>
+            <group default="true">hardware-support</group>
+            <group default="true">networkmanager-submodules</group>
+            <group default="true">^server-product-environment</group>
+            <group default="true">server-product</group>
+            <group default="true">headless-management</group>
+            <group default="true">container-management</group>
+            <group default="true">domain-client</group>
+            <group default="true">server-hardware-support</group>
+            <!-- Things needed for installation -->
+            <group default="true">anaconda-tools</group>
+            <group default="true">platform-vmware</group>
+        </groups>
+        <environments>
+          <environment display_order="2">server-product-environment</environment>
+          <environment display_order="99">custom-environment</environment>
+        </environments>
     </variant>
 </variants>
