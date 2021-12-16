@@ -36,6 +36,7 @@
             <arch>x86_64</arch>
         </arches>
     </variant>
+    <!-- We don't have the infrastructure to build 2 simultaneous variants
     <variant id="Server" name="Server" type="variant">
         <arches>
             <arch>x86_64</arch>
@@ -52,7 +53,6 @@
             <group default="true">container-management</group>
             <group default="true">domain-client</group>
             <group default="true">server-hardware-support</group>
-            <!-- Things needed for installation -->
             <group default="true">anaconda-tools</group>
             <group default="true">platform-vmware</group>
         </groups>
@@ -60,5 +60,5 @@
           <environment display_order="2">server-product-environment</environment>
           <environment display_order="99">custom-environment</environment>
         </environments>
-    </variant>
+    </variant> -->
 </variants>
