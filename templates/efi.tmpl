@@ -48,7 +48,7 @@ ${make_efiboot("images/efiboot.img")}
     %if disk:
         replace @ROOT@ inst.stage2=hd:LABEL=ANACONDA ${eficonf}
     %else:
-        replace @ROOT@ 'inst.stage2=hd:LABEL=${isolabel|udev}' ${eficonf}
+        replace @ROOT@ 'inst.stage2=hd:LABEL=${isolabel|udev} inst.repo=https://lapis.ultramarine-linux.org/pub/ultramarine/${product.version}/Everything/${basearch}/os/ inst.addrepo=lapis,https://lapis.ultramarine-linux.org/kojifiles/repos/um${product.version}-build/latest/${basearch}/' ${eficonf}
     %endif
     %if efiarch32 == 'IA32':
         copy ${eficonf} ${EFIBOOTDIR}/BOOT.conf

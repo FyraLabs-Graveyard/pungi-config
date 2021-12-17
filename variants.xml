@@ -12,10 +12,10 @@
             <group default="true">anaconda-tools</group>
             <group default="true">platform-vmware</group>
         </groups>
- -->        <environments>
+ -->    <!--     <environments>
           <environment>custom-environment</environment>
           <environment>flagship-product-environment</environment>
-        </environments>
+        </environments> -->
 
 
     </variant>

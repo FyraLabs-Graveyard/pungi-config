@@ -45,7 +45,7 @@ install /usr/lib/grub/powerpc-ieee1275/*.lst ${GRUBDIR}/powerpc-ieee1275
 install ${configdir}/grub.cfg.in     ${GRUBDIR}/grub.cfg
 replace @PRODUCT@ '${product.name}'  ${GRUBDIR}/grub.cfg
 replace @VERSION@ ${product.version} ${GRUBDIR}/grub.cfg
-replace @ROOT@ 'inst.stage2=hd:LABEL=${isolabel|udev}' ${GRUBDIR}/grub.cfg
+replace @ROOT@ 'inst.stage2=hd:LABEL=${isolabel|udev} inst.repo=https://lapis.ultramarine-linux.org/pub/ultramarine/${product.version}/Everything/${basearch}/os/ inst.addrepo=lapis,https://lapis.ultramarine-linux.org/kojifiles/repos/um${product.version}-build/latest/${basearch}/' ${GRUBDIR}/grub.cfg
 
 ## Install kernel and bootloader config (in separate places for each arch)
 %for kernel in kernels:

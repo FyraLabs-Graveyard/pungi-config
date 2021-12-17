@@ -33,7 +33,7 @@ install ${configdir}/generic.ins .
 
 ## configure bootloader
 replace @INITRD_LOAD_ADDRESS@ ${INITRD_ADDRESS} generic.ins
-replace @ROOT@ 'inst.stage2=hd:LABEL=${isolabel|udev}' ${BOOTDIR}/cdboot.prm
+replace @ROOT@ 'inst.stage2=hd:LABEL=${isolabel|udev} inst.repo=https://lapis.ultramarine-linux.org/pub/ultramarine/${product.version}/Everything/${basearch}/os/ inst.addrepo=lapis,https://lapis.ultramarine-linux.org/kojifiles/repos/um${product.version}-build/latest/${basearch}/' ${BOOTDIR}/cdboot.prm
 
 ## install kernel
 installkernel images-${basearch} ${kernel.path} ${KERNELDIR}/kernel.img
