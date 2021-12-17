@@ -3,7 +3,7 @@
         <arches>
             <arch>x86_64</arch>
         </arches>
-<!--         <groups>
+         <groups>
             <group default="true">guest-agents</group>
             <group default="true">standard</group>
             <group default="true">core</group>
@@ -12,7 +12,7 @@
             <group default="true">anaconda-tools</group>
             <group default="true">platform-vmware</group>
         </groups>
- -->        <environments>
+        <environments>
           <environment>custom-environment</environment>
           <environment>flagship-product-environment</environment>
         </environments>
