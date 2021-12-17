@@ -1,19 +1,18 @@
 <variants>
-    <variant id="Everything" name="Buffet" type="variant">
+    <variant id="Everything" name="Everything" type="variant">
         <arches>
             <arch>x86_64</arch>
         </arches>
-        <groups>
+<!--         <groups>
             <group default="true">guest-agents</group>
             <group default="true">standard</group>
             <group default="true">core</group>
             <group default="true">hardware-support</group>
             <group default="true">networkmanager-submodules</group>
-            <!-- Things needed for installation -->
             <group default="true">anaconda-tools</group>
             <group default="true">platform-vmware</group>
         </groups>
-        <environments>
+ -->        <environments>
           <environment display_order="2">custom-environment</environment>
         </environments>
 
