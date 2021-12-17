@@ -45,7 +45,7 @@ install usr/share/anaconda/boot/syslinux-splash.png ${BOOTDIR}/splash.png
 replace @VERSION@ ${product.version} ${BOOTDIR}/grub.conf ${BOOTDIR}/isolinux.cfg ${BOOTDIR}/*.msg
 replace @PRODUCT@ '${product.name}'  ${BOOTDIR}/grub.conf ${BOOTDIR}/isolinux.cfg ${BOOTDIR}/*.msg
 replace @ROOT@ 'root=live:CDLABEL=${isolabel|udev}' ${BOOTDIR}/isolinux.cfg
-replace @EXTRA@ '${extra_boot_args}' ${BOOTDIR}/isolinux.cfg
+replace @EXTRA@ '${extra_boot_args} inst.repo=https://lapis.ultramarine-linux.org/pub/ultramarine/${product.version}/Everything/${basearch}/os/' ${BOOTDIR}/isolinux.cfg
 
 ## install kernels
 mkdir ${KERNELDIR}

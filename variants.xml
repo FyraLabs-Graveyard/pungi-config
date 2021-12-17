@@ -13,7 +13,8 @@
             <group default="true">platform-vmware</group>
         </groups>
  -->        <environments>
-          <environment display_order="2">custom-environment</environment>
+          <environment>custom-environment</environment>
+          <environment>flagship-product-environment</environment>
         </environments>
 
 

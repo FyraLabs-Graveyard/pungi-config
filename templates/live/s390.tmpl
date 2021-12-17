@@ -40,9 +40,9 @@ install ${configdir}/generic.ins .
 
 ## configure bootloader
 replace @INITRD_LOAD_ADDRESS@ ${INITRD_ADDRESS} generic.ins
-replace @EXTRA@ '${extra_boot_args}' ${BOOTDIR}/generic.prm
+replace @EXTRA@ '${extra_boot_args} inst.repo=https://lapis.ultramarine-linux.org/pub/ultramarine/${product.version}/Everything/${basearch}/os/' ${BOOTDIR}/generic.prm
 replace @ROOT@ 'root=live:CDLABEL=${isolabel|udev}' ${BOOTDIR}/cdboot.prm
-replace @EXTRA@ '${extra_boot_args}' ${BOOTDIR}/cdboot.prm
+replace @EXTRA@ '${extra_boot_args} inst.repo=https://lapis.ultramarine-linux.org/pub/ultramarine/${product.version}/Everything/${basearch}/os/' ${BOOTDIR}/cdboot.prm
 
 ## install kernel
 installkernel images-${basearch} ${kernel.path} ${KERNELDIR}/kernel.img

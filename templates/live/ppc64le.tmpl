@@ -46,7 +46,7 @@ install ${configdir}/grub.cfg.in     ${GRUBDIR}/grub.cfg
 replace @PRODUCT@ '${product.name}'  ${GRUBDIR}/grub.cfg
 replace @VERSION@ ${product.version} ${GRUBDIR}/grub.cfg
 replace @ROOT@ 'root=live:CDLABEL=${isolabel|udev}' ${GRUBDIR}/grub.cfg
-replace @EXTRA@ '${extra_boot_args}' ${GRUBDIR}/grub.cfg
+replace @EXTRA@ '${extra_boot_args} inst.repo=https://lapis.ultramarine-linux.org/pub/ultramarine/${product.version}/Everything/${basearch}/os/' ${GRUBDIR}/grub.cfg
 
 ## Install kernel and bootloader config (in separate places for each arch)
 %for kernel in kernels:
