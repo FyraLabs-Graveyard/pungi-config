@@ -18,7 +18,6 @@
         </environments> -->
 
     <buildinstallpackages>
-        <package>ultramarine-lorax-templates</package>
         <package>ultramarine-release</package>
         <package>ultramarine-release-basic</package>
     </buildinstallpackages>

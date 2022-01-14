@@ -6,12 +6,17 @@ GRUB2VER="1:2.06-3"
 %>
 
 ## anaconda package
-installpkg anaconda anaconda-widgets kexec-tools-anaconda-addon anaconda-install-img-deps ultramarine-release-basic --except fedora-release*
+installpkg anaconda anaconda-widgets kexec-tools-anaconda-addon anaconda-install-img-deps --except lv2*
 ## Other available payloads
 installpkg dnf
 installpkg rpm-ostree ostree
 ## speed up compression on multicore systems
 installpkg pigz
+## why the hell is the base install image pulling in audio packages?
+installpkg --except lv2*
+# Just in case it still wants to install the lv2 packages
+installpkg libsndfile.so.1
+
 
 ## kernel and firmware
 ## NOTE: Without explicitly including kernel-modules-extra dnf will choose kernel-debuginfo-*
@@ -175,8 +180,6 @@ installpkg sil-scheherazade-fonts
 installpkg smc-meera-fonts
 installpkg thai-scalable-waree-fonts
 installpkg xorg-x11-fonts-misc
-installpkg fluent-theme
-installpkg fluent-icon-theme
 
 ## debugging/bug reporting tools
 installpkg gdb-gdbserver

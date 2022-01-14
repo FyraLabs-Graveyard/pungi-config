@@ -1,1 +1,1 @@
-pungi-koji --config ultramarine.conf --target-dir /mnt/koji/compose/testing/ --old-composes=/mnt/koji/compose/testing --test $@
+pungi-koji --config ultramarine-testing.conf --target-dir /mnt/koji/compose/testing/ --old-composes=/mnt/koji/compose/testing $@
