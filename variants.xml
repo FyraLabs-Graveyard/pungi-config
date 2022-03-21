@@ -44,6 +44,11 @@
             <arch>x86_64</arch>
         </arches>
     </variant>
+    <variant id="Lapis" name="Lapis" type="variant" is_empty="true">
+        <arches>
+            <arch>x86_64</arch>
+        </arches>
+    </variant>
     <!-- We don't have the infrastructure to build 2 simultaneous variants
     <variant id="Server" name="Server" type="variant">
         <arches>

@@ -1,4 +1,8 @@
-installpkg ultramarine-release-basic
-installpkg ultramarine-release-common
-installpkg ultramarine-logos --except fedora-release*
-run_pkg_transaction
+append usr/share/anaconda/interactive-defaults.ks "url --url=https://lapis.ultramarine-linux.org/pub/ultramarine/$releasever/Everything/$basearch/os/"
+append usr/share/anaconda/interactive-defaults.ks "repo --name=fedora --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch --excludepkgs=neofetch"
+append usr/share/anaconda/interactive-defaults.ks "repo --name=updates --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f$releasever&arch=$basearch --excludepkgs=kernel*,neofetch"
+append usr/share/anaconda/interactive-defaults.ks "repo --name=rpmfusion-free-release --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-$releasever&arch=$basearch"
+append usr/share/anaconda/interactive-defaults.ks "repo --name=rpmfusion-free-release-tainted --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-$releasever&arch=$basearch"
+append usr/share/anaconda/interactive-defaults.ks "repo --name=rpmfusion-nonfree-release --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-$releasever&arch=$basearch"
+append usr/share/anaconda/interactive-defaults.ks "repo --name=rpmfusion-nonfree-release-tainted --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-$releasever&arch=$basearch"
+append usr/share/anaconda/interactive-defaults.ks "repo --name=fedora-cisco-openh264 --baseurl=https://codecs.fedoraproject.org/openh264/$releasever/$basearch/os/"
