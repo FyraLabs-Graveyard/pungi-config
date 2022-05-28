@@ -1,7 +1,8 @@
 DATE=$(date "+%Y%m%d")
-pungi-koji \
- --config ultramarine-testing.conf \
- --target-dir /mnt/koji/compose/testing/ \
- --old-composes=/mnt/koji/compose/testing \
- $@
 
+VERSION=36
+
+pungi-koji --config um${VERSION}.conf \
+ --target-dir \
+ /mnt/koji/compose/testing \
+ --old-composes=/mnt/koji/compose/testing $@

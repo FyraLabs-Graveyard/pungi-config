@@ -1,1 +1,6 @@
-pungi-koji --config ultramarine.conf --target-dir /mnt/koji/compose/35/ --old-composes=/mnt/koji/compose/35 $@
+VERSION=36
+
+pungi-koji --config um${VERSION}.conf \
+ --target-dir \
+ /mnt/koji/compose/${VERSION}/ \
+ --old-composes=/mnt/koji/compose/${VERSION} $@
